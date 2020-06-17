@@ -35,10 +35,10 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     }
   });
 
-$(document).ready(function () {
-    $('.each-ingr').hover(function() {
-        $(this).slideUp(500);
-    }, function() {
-        $(this).slideDown(500);
-    }
-    );};
+// $(document).ready(function () {
+//     $('.each-ingr').hover(function() {
+//         $(this).slideUp(500);
+//     }, function() {
+//         $(this).slideDown(500);
+//     }
+//     );};
