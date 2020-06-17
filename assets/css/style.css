@@ -239,5 +239,9 @@ img {
         justify-content: space-evenly;        
     }
         .each-ingr {
-            height: 80px;
+            width: 80px;
+        }
+        .each-ingr img {
+            width: 100%;
+            object-position: bottom;
         }
