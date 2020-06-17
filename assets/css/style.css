@@ -52,7 +52,10 @@ body {
     margin: 0 auto;
     width: 100%;
 }
-
+img {
+    height: 100%;
+    object-fit: contain;
+}
 
 /* HEADER START */
 .home-header {
@@ -146,3 +149,95 @@ body {
     justify-content: center;
     align-items: center;
 }
+/* HEADER END */
+
+/* MAIN SLIDER!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.main-slider {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+    .main-wrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+/* START MAIN */
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 56px 75px;
+}
+    .main-upside {
+        display: flex;
+        flex-grow: 1;
+    }
+        .main-article {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-right: 90px;
+        }
+            .main-article h1 {
+                font-size: 76px;
+                line-height: 86px;
+            }
+            .jff {
+                font-family: gothaProReg;
+                font-size: 17px;
+                line-height: 28px;
+                display: flex;
+
+            }
+                .line {
+                    display: block;
+                    background: linear-gradient(30deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+                    width: 30px;
+                    margin-right: 32px;
+                }
+            .selecting-boxes-for-main-image {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+                .each-selecting-box {
+                    height: 100%;
+                    margin: 0 8px;
+                    display: flex;
+                    flex-direction: column;
+                }
+                    .each-selecting-box p {
+                        text-align: center;
+                        font-family: gothaProMedium;
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                    .bottle-little {
+                        height: 72px;
+                    }
+                    .bottle-big {
+                        height: 127px;
+                    }
+
+        .main-chosen-photo {
+            width: 26vmin;
+            display: flex;
+            align-items: center;
+        }
+        .main-chosen-photo img {
+            height: 45vmin;
+        }
+    .ingredients {
+        flex-basis: 1;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-evenly;        
+    }
+        .each-ingr {
+            height: 80px;
+        }
