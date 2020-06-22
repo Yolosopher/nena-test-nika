@@ -55,8 +55,8 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
 
 $(document).ready(function () {
     $('.each-ingr').mouseover(function() {
-      $(this).css('bottom', '50px');
-      $(this).next().css('bottom', '20px');
+      $(this).css('bottom', '30px');
+      $(this).next().css('bottom', '10px');
       $(this).prev().css('bottom', '10px');
   })
     $('.each-ingr').mouseleave(function() {
