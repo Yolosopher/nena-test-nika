@@ -1,5 +1,19 @@
+// scrollbar
+var swiper = new Swiper('.whole-slider-outer', {
+  direction: 'vertical',
+  slidesPerView: 1,
+  spaceBetween: 30,
+  mousewheel: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
+
+
+// gallery
 var galleryThumbs = new Swiper('.gallery-thumbs', {
-    spaceBetween: 10,
+    spaceBetween: 0,
     slidesPerView: 11,
     freeMode: true,
     watchSlidesVisibility: true,
@@ -15,7 +29,7 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
         },
         1000: {
           slidesPerView: 8,
-          spaceBetween: 10,
+          spaceBetween: 0,
         },
       }
   });
@@ -35,10 +49,29 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     }
   });
 
-// $(document).ready(function () {
-//     $('.each-ingr').hover(function() {
-//         $(this).slideUp(500);
-//     }, function() {
-//         $(this).slideDown(500);
-//     }
-//     );};
+
+
+
+
+$(document).ready(function () {
+    $('.each-ingr').mouseover(function() {
+      $(this).css('bottom', '50px');
+      $(this).next().css('bottom', '20px');
+      $(this).prev().css('bottom', '10px');
+  })
+    $('.each-ingr').mouseleave(function() {
+      $(this).css('bottom', '0');
+      $(this).next().css('bottom', '0');
+      $(this).prev().css('bottom', '0');
+    })
+
+
+    $('.each-selecting-box').click(function() {
+      $('.each-selecting-box').removeClass('chosen');
+      $(this).addClass('chosen');
+      let src = $(this).find('img').attr('src');
+      
+      let mainChsnPhoto = $(this).parent().parent().parent().find('.main-chosen-photo img');
+      mainChsnPhoto.attr('src', src);
+    })
+  });
