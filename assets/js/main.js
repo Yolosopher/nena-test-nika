@@ -73,7 +73,11 @@ $(document).ready(function () {
       
       let mainChsnPhoto = $(this).parent().parent().parent().find('.main-chosen-photo img');
       mainChsnPhoto.attr('src', src);
-      mainChsnPhoto.removeClass('m-ch-p');
-      mainChsnPhoto.addClass('m-ch-p');
+      mainChsnPhoto.animate({
+        opacity: '0.6'
+      }, 1);
+      mainChsnPhoto.animate({
+        opacity: '1'
+      }, 1000);
     })
   });

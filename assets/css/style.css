@@ -265,11 +265,6 @@ img {
                 
                 .main-chosen-photo img {
                     width: 100%;
-                    opacity: 0.6;
-                }
-                .main-chosen-photo.m-ch-p img {
-                    opacity: unset;
-                    transition: 3s ease-in;
                 }
         .ingredients {
             flex-basis: 1;
