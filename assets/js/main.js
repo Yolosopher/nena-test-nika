@@ -73,5 +73,7 @@ $(document).ready(function () {
       
       let mainChsnPhoto = $(this).parent().parent().parent().find('.main-chosen-photo img');
       mainChsnPhoto.attr('src', src);
+      mainChsnPhoto.removeClass('m-ch-p');
+      mainChsnPhoto.addClass('m-ch-p');
     })
   });
