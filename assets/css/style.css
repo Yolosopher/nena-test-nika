@@ -235,10 +235,11 @@ img {
                         }
                         .each-selecting-box:hover {
                             opacity: unset;
-                            transition: 0.4 ease;
+                            transition: 4s ease;
                         }
                         .each-selecting-box.chosen {
                             opacity: unset;
+                            transition: 0.4s ease;
                         }
                             .each-selecting-box p {
                                 margin-top: 8px;
