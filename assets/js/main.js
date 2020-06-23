@@ -2,7 +2,7 @@
 var swiper = new Swiper('.whole-slider-outer', {
   direction: 'vertical',
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 0,
   mousewheel: true,
   pagination: {
     el: '.swiper-pagination',
@@ -72,12 +72,14 @@ $(document).ready(function () {
       let src = $(this).find('img').attr('src');
       
       let mainChsnPhoto = $(this).parent().parent().parent().find('.main-chosen-photo img');
-      mainChsnPhoto.attr('src', src);
-      mainChsnPhoto.animate({
-        opacity: '0.6'
-      }, 1);
-      mainChsnPhoto.animate({
-        opacity: '1'
-      }, 1000);
+      mainChsnPhoto.fadeOut(400, function() {
+        $(this).attr('src', src).fadeIn(400)
+      });
+      
     })
+
+    // POPULAR PRODUCTS
+    $('.pp-each-box-li').mouseover(function() {
+      $(this).toggleClass('each-box-li-active');
+    });
   });
