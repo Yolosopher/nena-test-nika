@@ -376,7 +376,7 @@ img {
                         font-weight: bold;
                     }
                     .pp-each-box-ul {
-                        margin-top: ;
+                        /* margin-top: ; */
                         display: flex;
                         flex-wrap: wrap;
                         margin-left: 15px;
@@ -406,11 +406,17 @@ img {
                             border-top-left-radius: 10px;
                             border-bottom-left-radius: 10px;
                         }
-                        .pp-each-box-li.each-box-li-active:hover::after {
+                        .each-box-li-active:hover::after {
                             height: 100%;
                             -webkit-transition: 0.9s ease-in-out;
                             transition: 0.9s ease-in-out;
                         }
+                        .each-box-li-active-remove::after {
+                            height: 0%;
+                            -webkit-transition: 0.9s ease-in-out;
+                            transition: 0.9s ease-in-out;
+                        }
+
                             .pp-each-box-li img {
                                 height: 58px;
                                 object-fit: contain;
