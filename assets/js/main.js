@@ -79,7 +79,12 @@ $(document).ready(function () {
     })
 
     // POPULAR PRODUCTS
-    $('.pp-each-box-li').mouseover(function() {
-      $(this).toggleClass('each-box-li-active');
-    });
-  });
+  //   $('.pp-each-box-li').mouseover(function() {
+  //     $(this).toggleClass('each-box-li-active');
+  //   });
+  // });
+  //   $('.pp-each-box-li').mouseleave(function() {
+  //     $(this).toggleClass('each-box-li-active');
+  //   });
+  // });
+  
