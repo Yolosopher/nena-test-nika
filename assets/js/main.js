@@ -82,7 +82,7 @@ $(document).ready(function () {
   }
 
 
-  // POPULAR PRODUCTS
+  // POPULAR PRODUCTS - mouseover/mouseleave
   $('.pp-each-box-li').mouseover(function () {
     $(this).addClass('each-box-li-active');
   });
@@ -99,7 +99,7 @@ $(document).ready(function () {
   let ppLis = document.querySelectorAll('.pp-each-box-li');
   let currentLi = 0;
   autoPlay();
-  setInterval(()=>{
+  let intervaler = setInterval(()=>{
     autoPlay();
   }, 6000);
 
@@ -115,7 +115,7 @@ $(document).ready(function () {
     };
     srcAutoChanger();
   };
-
+  // POPULAR PRODUCTS src AUTO change
   function srcAutoChanger() {
     if ($('.pp-each-box-li').hasClass('each-box-li-selected')) {
       let src = $('.each-box-li-selected a img').attr('src');
@@ -124,5 +124,20 @@ $(document).ready(function () {
         $(this).attr('src', src).fadeIn(400)
       });
     }
-  }
+  };
+  // POPULAR PRODUCTS src CLICK change
+  $('.pp-each-box-li').click(function () {
+    $('.each-box-li-selected').removeClass('each-box-li-selected');
+
+    $(this).addClass('each-box-li-selected');
+
+    currentLi = $(this).index();
+    
+    srcAutoChanger();
+    clearInterval(intervaler);
+    autoPlay();
+    intervaler = setInterval(()=>{
+      autoPlay();
+    }, 6000);
+  });
 });
