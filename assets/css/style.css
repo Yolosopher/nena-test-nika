@@ -32,6 +32,7 @@
   font-family: gothaProReg;
   src: url(../fonts/GothaProReg.otf);
 }
+
 a:any-link {
     text-decoration: none;
     color: inherit;
@@ -406,7 +407,7 @@ img {
                             border-top-left-radius: 10px;
                             border-bottom-left-radius: 10px;
                         }
-                        .each-box-li-active:hover::after {
+                        .each-box-li-active::after {
                             height: 100%;
                             -webkit-transition: 0.9s ease-in-out;
                             transition: 0.9s ease-in-out;
@@ -416,6 +417,12 @@ img {
                             -webkit-transition: 0.9s ease-in-out;
                             transition: 0.9s ease-in-out;
                         }
+                        .pp-each-box-li.each-box-li-selected::after {
+                            height: 100%;
+                            -webkit-transition: 0.9s ease-in-out;
+                            transition: 0.9s ease-in-out;
+                        }
+
 
                             .pp-each-box-li img {
                                 height: 58px;
