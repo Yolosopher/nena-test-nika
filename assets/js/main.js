@@ -113,10 +113,10 @@ $(document).ready(function () {
     if (a === ppLis.length) {
       currentLi = 0;
     };
-    srcChanger();
+    srcAutoChanger();
   };
 
-  function srcChanger() {
+  function srcAutoChanger() {
     if ($('.pp-each-box-li').hasClass('each-box-li-selected')) {
       let src = $('.each-box-li-selected a img').attr('src');
 
