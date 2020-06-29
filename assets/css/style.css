@@ -463,6 +463,7 @@ img {
                             justify-content: center;
                             align-items: center;
                         }
+    /* ABOUT COMPANY START */
     .about-company {
         display: flex;
         justify-content: space-between;
@@ -537,3 +538,78 @@ img {
                                 object-fit: ;
                                 object-position: center;
                             }
+    /* ABOUT COMPANY END */
+
+
+    /* CONTACT START */
+    .c-all {
+        padding: 56px 75px;
+        width: 100%;
+        height: 100vmin;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+        .c-one {
+            display: flex;
+            justify-content: center;
+            margin-top: ;
+        }
+            .c-one a {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+                .fb:hover {
+                    background-color: #3B5998;
+                }
+                    .c-one a i {
+                        font-size: 16px;
+                    }
+                .fb {
+                    color: #3B5998;
+                }
+                .yt {
+                    color: #FF0000;
+                    margin: 0 56px;
+                }
+                .ig {
+                    color: #D6249F;
+                }
+            .c-two {
+                display: flex;
+                justify-content: space-around;
+                width: 80%;
+            }
+                .c-infooo {
+                    width: 215px;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                }
+                    .c-infooo img {
+                        width: 41px;
+                        height: 41px;
+                    }    
+                    .c-infooo h2 {
+                        margin: 15px 0;
+                        font-size: 19px;
+                        color: #171717;
+                    }
+                    .c-infooo p {
+                        text-align: center;
+                        font-size: 14px;
+                        color: #171717;
+                        font-family: gothaProReg;
+                    }
+            .creator {
+                font-size: 14px;
+                font-family: gothaProReg;
+            }
+
+    /* CONTACT END */
