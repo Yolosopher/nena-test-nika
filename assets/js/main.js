@@ -73,7 +73,7 @@ $(document).ready(function () {
       $(`.${each}`).removeClass('chosen');
       $(this).addClass('chosen');
       let src = $(this).find('img').attr('src');
-  
+
       let mainChsnPhoto = $(this).parent().parent().parent().find(`.${main} img`);
       mainChsnPhoto.fadeOut(400, function () {
         $(this).attr('src', src).fadeIn(400)
@@ -99,20 +99,22 @@ $(document).ready(function () {
   let ppLis = document.querySelectorAll('.pp-each-box-li');
   let currentLi = 0;
   autoPlay();
-  let intervaler = setInterval(()=>{
+  let intervaler = setInterval(() => {
     autoPlay();
-  }, 6000);
+  }, 3000);
 
   function autoPlay() {
-    if ((currentLi-1) != -1) {
-      ppLis[currentLi-1].classList.remove('each-box-li-selected');
-    }
+    if ((currentLi - 1) != -1) {
+      ppLis[currentLi - 1].classList.remove('each-box-li-selected');
+    } else {
+      ppLis[9].classList.remove('each-box-li-selected');
+    };
     ppLis[currentLi].classList.add('each-box-li-selected');
     currentLi++;
     let a = currentLi;
     if (a === ppLis.length) {
       currentLi = 0;
-    };
+    }
     srcAutoChanger();
   };
   // POPULAR PRODUCTS src AUTO change
@@ -120,7 +122,7 @@ $(document).ready(function () {
     if ($('.pp-each-box-li').hasClass('each-box-li-selected')) {
       let src = $('.each-box-li-selected a img').attr('src');
 
-      $('.pp-main-box img').fadeOut(400, function() {
+      $('.pp-main-box img').fadeOut(400, function () {
         $(this).attr('src', src).fadeIn(400)
       });
     }
@@ -132,12 +134,19 @@ $(document).ready(function () {
     $(this).addClass('each-box-li-selected');
 
     currentLi = $(this).index();
-    
+
     srcAutoChanger();
     clearInterval(intervaler);
     autoPlay();
-    intervaler = setInterval(()=>{
+    intervaler = setInterval(() => {
       autoPlay();
     }, 6000);
   });
+});
+
+
+// ABOUT US LOGOS SLIDER
+var swiper3 = new Swiper('.ac-part3-slider', {
+  slidesPerView: 6,
+  spaceBetween: 30,
 });

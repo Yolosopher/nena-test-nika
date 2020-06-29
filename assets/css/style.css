@@ -48,7 +48,7 @@ a:any-link {
 }
 body {
     font-size: 12px;
-    background-color: rgba(5, 73, 16, 0.466);
+    background-color: rgba(186, 218, 191, 0.466);
 }
 .container {
     max-width: 1200px;
@@ -116,6 +116,8 @@ img {
     left: 0;
     width: 100%;
     border: 2px solid rgba(23, 23, 23, 0.3);
+    background-color: #fff;
+    z-index: 2;
 }
 .tog-li:hover .toggled-ul {
     display: unset;
@@ -375,6 +377,7 @@ img {
                         font-size: 38px;
                         line-height: 43px;
                         font-weight: bold;
+                        margin-bottom: 40px;
                     }
                     .pp-each-box-ul {
                         /* margin-top: ; */
@@ -460,3 +463,77 @@ img {
                             justify-content: center;
                             align-items: center;
                         }
+    .about-company {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+        .ac-all {
+            padding: 56px 75px;
+            width: 100%;
+            height: 100vmin;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;            
+        }
+            .ac-up {
+                display: flex;
+            }
+                .ac-part1 {
+                    display: flex;
+                    flex-flow: column;
+                    max-width: calc(50% - 50px);
+                    height: 100%;
+                    padding-right: 20px;
+                    ;
+                }
+                    .ac-part1 h1 {
+                        margin-top: 100px;
+                        color: #171717;
+                        margin-bottom: 40px;
+                        font: 38px/45px gothaProBol;
+                    }
+                    .ac-part1 p {
+                        position: relative;
+                        line-height: 32px;
+                        font-family: gothaProReg;
+                        color: #171717;
+                        font-size: 16px;
+                        padding-left: 16px;
+                    }
+                .ac-part2 {
+                    margin-top: 100px;
+                    /* width: 42%; */
+                    height: 50vmin;
+                    display: block;
+                    position: relative;
+                    /* right: 50px; */
+                    flex-grow: 1;  
+                }
+                    .video {
+                        width: 100%;
+                        height: 80%;
+                        border: none;
+                    }
+            .ac-part3-slider {
+
+            }
+                .ac-part3-slider-wrapper {
+                    display: flex;
+                    height: 176px;
+                    position: relative;
+                }
+                    .ac-part3-slider-each {
+                        /* width: 200px; */
+                        /* height: 100%; */
+                    }
+                        .ac-part3-slider-each a {
+                            /* width: 100%; */
+                            height: 100%;
+                            display: block;
+                        }
+                            .ac-part3-slider-each a img {
+                                width: 100%;
+                                object-fit: ;
+                                object-position: center;
+                            }
